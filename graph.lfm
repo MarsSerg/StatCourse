@@ -1,0 +1,305 @@
+object Form1: TForm1
+  Left = 368
+  Height = 439
+  Top = 103
+  Width = 689
+  Caption = 'Form1'
+  ClientHeight = 439
+  ClientWidth = 689
+  LCLVersion = '1.2.4.0'
+  object Registration: TGroupBox
+    Left = 0
+    Height = 147
+    Top = 295
+    Width = 254
+    ClientHeight = 129
+    ClientWidth = 250
+    Color = clGray
+    ParentColor = False
+    TabOrder = 0
+    object ForLogin: TPanel
+      Left = 0
+      Height = 24
+      Top = -8
+      Width = 251
+      Caption = 'Введите логин'
+      Color = clSilver
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -13
+      Font.Name = 'Arial Black'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object LoginEdit: TEdit
+      Left = 2
+      Height = 23
+      Top = 18
+      Width = 250
+      TabOrder = 1
+    end
+    object ForPass: TPanel
+      Left = 0
+      Height = 24
+      Top = 48
+      Width = 251
+      Caption = 'Введите пароль'
+      Color = clSilver
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -13
+      Font.Name = 'Arial Black'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object PassEdit: TEdit
+      Left = 0
+      Height = 23
+      Top = 72
+      Width = 247
+      TabOrder = 3
+    end
+    object Ok: TPanel
+      Left = 80
+      Height = 24
+      Top = 96
+      Width = 85
+      Caption = 'Ok'
+      Color = clSilver
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -13
+      Font.Name = 'Arial Black'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 4
+      OnClick = OkClick
+    end
+  end
+  object Main: TGroupBox
+    Left = 0
+    Height = 408
+    Top = 0
+    Width = 690
+    ClientHeight = 390
+    ClientWidth = 686
+    Color = clGrayText
+    ParentBidiMode = False
+    ParentColor = False
+    TabOrder = 1
+    object View: TTreeView
+      Left = 0
+      Height = 399
+      Top = -9
+      Width = 112
+      DefaultItemHeight = 18
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -11
+      Font.Name = 'Franklin Gothic Demi'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      ReadOnly = True
+      RowSelect = True
+      ScrollBars = ssNone
+      SelectionColor = clSkyBlue
+      ShowButtons = False
+      TabOrder = 0
+      OnChange = ViewChange
+      Options = [tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoRowSelect, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    end
+    object Chart1: TChart
+      Left = 113
+      Height = 240
+      Top = 64
+      Width = 409
+      AxisList = <      
+        item
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+        end      
+        item
+          Visible = False
+          Alignment = calBottom
+          Minors = <>
+        end>
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Legend.ItemFillOrder = lfoRowCol
+      Legend.Visible = True
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      ParentColor = False
+      Visible = False
+      object Chart1BarSeries1: TBarSeries
+        Title = 'Средний балл'
+        BarBrush.Color = clYellow
+      end
+      object Chart1BarSeries2: TBarSeries
+        Title = 'Суммарный балл'
+        BarBrush.Color = clGreen
+      end
+    end
+    object Panel1: TPanel
+      Left = 112
+      Height = 43
+      Top = -8
+      Width = 409
+      Caption = 'Panel1'
+      Color = clActiveBorder
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Height = -13
+      Font.Name = 'Franklin Gothic Heavy'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Panel2: TPanel
+      Cursor = crHandPoint
+      Left = 112
+      Height = 27
+      Top = 35
+      Width = 130
+      Caption = 'Диаграмма'
+      Color = clGrayText
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clSilver
+      Font.Height = -12
+      Font.Name = 'Franklin Gothic Demi'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 3
+      OnClick = Panel3Click
+    end
+    object Panel3: TPanel
+      Cursor = crHandPoint
+      Left = 240
+      Height = 27
+      Top = 35
+      Width = 144
+      Caption = 'Таблица'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clSilver
+      Font.Height = -12
+      Font.Name = 'Franklin Gothic Demi'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 4
+      OnClick = Panel2Click
+    end
+    object Panel4: TPanel
+      Cursor = crHandPoint
+      Left = 384
+      Height = 27
+      Top = 35
+      Width = 138
+      Caption = 'По группам'
+      Font.CharSet = RUSSIAN_CHARSET
+      Font.Color = clSilver
+      Font.Height = -12
+      Font.Name = 'Franklin Gothic Demi'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      ParentFont = False
+      TabOrder = 5
+      OnClick = Panel4Click
+    end
+    object StringGrid1: TStringGrid
+      Left = 240
+      Height = 206
+      Top = 64
+      Width = 487
+      TabOrder = 6
+      Visible = False
+    end
+    object GRB: TGroupBox
+      Left = 128
+      Height = 312
+      Top = 88
+      Width = 424
+      ClientHeight = 294
+      ClientWidth = 420
+      TabOrder = 7
+      Visible = False
+      object Chart2: TChart
+        Left = 0
+        Height = 288
+        Top = 0
+        Width = 372
+        AxisList = <        
+          item
+            Minors = <>
+            Title.LabelFont.Orientation = 900
+          end        
+          item
+            Visible = False
+            Alignment = calBottom
+            Minors = <>
+          end>
+        Foot.Brush.Color = clBtnFace
+        Foot.Font.Color = clBlue
+        Legend.MarginX = 10
+        Title.Brush.Color = clBtnFace
+        Title.Font.Color = clBlue
+        Title.Text.Strings = (
+          'TAChart'
+        )
+        ParentColor = False
+        object Chart2BarSeries1: TBarSeries
+          Legend.Visible = False
+          Shadow.Visible = True
+          Marks.Distance = 5
+          BarBrush.Color = clRed
+          BarWidthPercent = 20
+          BarWidthStyle = bwPercent
+        end
+      end
+    end
+  end
+  object MSSQLConnection1: TMSSQLConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'Anketa'
+    KeepConnection = False
+    Password = '1234'
+    Transaction = SQLTransaction1
+    UserName = 'AdminAnk'
+    HostName = 'localhost'
+    LogEvents = []
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = MSSQLConnection1
+    Transaction = SQLTransaction1
+    Params = <>
+    top = 64
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = MSSQLConnection1
+    top = 32
+  end
+  object LableChartSource: TListChartSource
+    DataPoints.Strings = (
+      '1|0|$804000|gyivhjbk'
+    )
+    top = 104
+  end
+end
